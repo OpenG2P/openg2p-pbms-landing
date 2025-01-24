@@ -16,8 +16,8 @@
             justify-content: center; /* Centers container horizontally */
         }
         .container {
-            width: 100%;
-            width: 1280px;
+            width: 100vw;
+            #width: 1280px;
             overflow: hidden;
         }
         .header {
@@ -32,16 +32,18 @@
             height: auto;
             position: absolute;
             left: 123px;
-            top: 22px;
+            top: 28px;
         }
         .black-background {
             position: relative;
             background: #000000;
             height: 703px; 
+            justify-content: center;
+            display: flex
         }
         .black-title-image {
             position: absolute; 
-            left: 550px; 
+            #left: 550px; 
             top: 40px;  
             width: 180px;
             height: auto;
@@ -49,7 +51,6 @@
         }
        .black-version {
             position: absolute; 
-            left: 550px; 
             top: 160px;  
             max-width: 483px;
             font-family: 'Montserrat'; 
@@ -58,11 +59,20 @@
             color: #8C8989;
         }
 
+       .link-container {
+            display: flex;
+            position: relative; 
+            width: 1050px;
+            height: 700px;
+            top: 20px;
+            #justify-content: center;
+       }
        .link-square {
-            position: absolute; 
+            display: flex;
+            #position: relative;
+            position: absolute;
             border-radius: 20px;
             background: #F4C235;
-            left: 123px;
             top: 250px;
             width: 288px;
             height: 106px;
@@ -95,27 +105,29 @@
         <div class="header">
             <img src="https://openg2p.github.io/project/design-assets/OpenG2PHorizontalLogoLightBackground.png" class="logo">
         </div>
+
         <div class="black-background">
             <img class="black-title-image" src="https://openg2p.github.io/project/design-assets/PBMS-on-dark-background.png"></img>
             <div class="black-version">Package version: ${PBMS_VERSION}<br>App version: ${PBMS_APP_VERSION}</div>
+
+            <div class="link-container">
 	    <a href="${PBMS_ADMIN_URL}" target="_blank">
-                <div class="link-square">
+                <div class="link-square" style="left: 0px; position: absolute;">
                     <div class="icon"><img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img></div>
                     <div class="link-text">PBMS Admin</div>
                 </div>
             </a>
 
 	    <a href="${PBMS_REPORTING_URL}" target="_blank">
-                <div class="link-square" style="left: 496px;">
+                <div class="link-square" style="left: 385px;">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
                     <div class="link-text">Reporting Dashboard</div>
                 </div>
-            </a>
 
 	    <a href="${PBMS_BENEFICIARY_URL}" target="_blank">
-                <div class="link-square" style="left: 869px;">
+                <div class="link-square" style="right: 0; position: absolute;">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
@@ -124,7 +136,7 @@
             </a>
 
 	    <a href="${PBMS_LOGGING_URL}" target="_blank">
-                <div class="link-square" style="top: 400px;">
+                <div class="link-square" style="left: 385px; top: 400px;">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
@@ -133,25 +145,23 @@
             </a>
 
 	    <a href="${PBMS_ODK_URL}" target="_blank">
-                <div class="link-square" style="top: 400px; left: 496px;">
+                <div class="link-square" style="top: 400px">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
                     <div class="link-text">ODK<br>Admin</div>
                 </div>
             </a>
-
 	    <a href="${PBMS_SUPERSET_URL}" target="_blank">
-                <div class="link-square" style="top: 400px; left: 869px;">
+                <div class="link-square" style="right: 0; top: 400px; position: absolute; ">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
                     <div class="link-text">Superset<br>Dashboard</div>
                 </div>
             </a>
-
 	    <a href="${PBMS_KAFKA_URL}" target="_blank">
-                <div class="link-square" style="top: 550px;">
+                <div class="link-square" style="left: 0px; top: 550px; position: absolute;">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
@@ -160,7 +170,7 @@
             </a>
 
 	    <a href="${PBMS_MINIO_URL}" target="_blank">
-                <div class="link-square" style="top: 550px; left: 496px;">
+                <div class="link-square" style="left: 380px; top: 550px;">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
@@ -169,13 +179,14 @@
             </a>
 
 	    <a href="${PBMS_SERVICE_PROVIDER_URL}" target="_blank">
-                <div class="link-square" style="top: 550px; left: 869px;">
+                <div class="link-square" style="top: 550px; right: 0; position: absolute;">
                     <div class="icon">
                         <img src="https://openg2p.github.io/project/design-assets/link-icon.png"></img>
                     </div>
                     <div class="link-text">Service Provider<br>Portal</div>
                 </div>
             </a>
+            </div>
 
         </div>
     </div>
